@@ -1,0 +1,11 @@
+/*Imported from: https://cdn.pyca.ie/css_debugger.css
+/*We are using local bundles (js/css) files only - as no internet connections are allowed
+
+/* CSS Debugger - Developed by Pyca Ireland | Open source: https://github.com/Pyca-Ireland */
+/*HOW TO USE? - Place ID tag debug on any element to outline them */
+
+#debug {
+  border-width: 2px;
+  border-style: dotted;
+  border-color: #7f1d1d; /* ctx-convert to tailwind-red900 */
+}

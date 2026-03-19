@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--added comments everywhere for dev and also in case ur interested w/ the codebase-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LCCS | ALT2 </title>
+    <link rel="stylesheet" href="bundles/cssdebug.css"> <!--for debugging divs-->
+    <link rel="stylesheet" href="assets/styles.css"> <!--for general purpose styling-->
+    <script src="assets/selector.js"></script> <!--navbar logic and responsive ui controller-->
+    <script src="bundles/tailwind.js"></script> <!--for css-->
+    <script src="bundles/markdown.js"></script> <!--for text-->
+</head>
+<body class="bg-gradient-to-tr from-neutral-800 to-neutral-950">
+    <!--btw, pls ignore empty id tags | they use to have id="debug" in them at some point-->
+    <div id="" class="min-h-screen w-screen flex justify-center">
+        <div id="" class="min-w-[50%] m-6 p-6 border rounded-2xl bg-white"> <!--[16px 2xl]-->
+            <div class="font-bold text-4xl">
+                Leaving Cert Computer Science (ALT2 - Analytics)
+            </div>
+            <div>
+                Adam Bell, Nathaniel Norton Silva & Taras Turchyn
+            </div> <!--spacing for y on title and navbar-->
+            <div class="py-1">
+                <!--i did not like how far <br> pads out the y axis so this is my fix-->
+            </div>
+            <div id="" class="space-x-[32px] flex justify-center p-2 border rounded-[8px] bg-gray-50">
+                <!--selector class #selected
+                p-2 border rounded-[4px] bg-white
+                hover:border hover:rounded-[4px] hover:bg-white < leagcy
+                -->
+                <btn id="default" class="p-2 cursor-pointer" onclick="select(this)">Investigation & Plan</btn>
+                <btn class="p-2 cursor-pointer" onclick="select(this)">Design</btn>
+                <btn class="p-2 cursor-pointer" onclick="select(this)">Implementation & Testing</btn>
+                <btn class="p-2 cursor-pointer" onclick="select(this)">Evaluation</btn>
+                <btn class="p-2 cursor-pointer" onclick="select(this)">Extra Information</btn>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
