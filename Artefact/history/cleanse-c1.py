@@ -1,5 +1,7 @@
 from pprint import pprint
 
+# not using pandas for scifest one as there is an issue with the encoding between microsoft + pandas
+
 def gender_check(gender : str) -> str:
     if gender == "Prefer not to say":
         return "Other"
@@ -58,7 +60,4 @@ with open("Artefact/datasets/ty_scifest_screentime.csv", "r", encoding="utf-8") 
         #pprint(data)
         #print(age)
         #print(devices)
-       # print(gender)
-
-        print(age, devices, gender)
- 
+        print(gender)
