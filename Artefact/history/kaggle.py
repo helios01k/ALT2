@@ -19,12 +19,15 @@ def compute_addiction_score(stress: str, academic_impact: str, addiction: str) -
 
 csv = pd.read_csv(kaggle_dataset)
 
-users = []
+students = []
+
+
 
 for position, age in enumerate(csv["age"]):
     # dataset actually only has the youngest age group of 18 but ill still keep ts logic here
+    # in reality it should just be == 18 but i wont replace as mentioend
     if 13 <= age <= 18:
-        users.append({
+        students.append({
             "age": int(age),
             "gender": csv["gender"][position].strip(),
             "screen_hours": csv["daily_screen_time_hours"][position],

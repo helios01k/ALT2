@@ -1,6 +1,3 @@
-// Import marked from the ES module bundle
-import { marked } from '../bundles/markdown.js';
-
 const tab_file = {
     "Investigation & Plan": "plan.md",
     "Design": "design.md",
@@ -9,26 +6,24 @@ const tab_file = {
     "Extra Information": "extras.md"
 };
 
-async function load_markdown(filename) {
+function load_markdown(filename) {
     const contentDiv = document.getElementById('content');
 
-    try {
-        const response = await fetch(`pages/${filename}`);
-        if (!response.ok) {
-            throw new Error(`fail -> ${filename}`);
-        }
-        const markdown = await response.text();
+    // get embed
+    if (typeof PAGE_CONTENT !== 'undefined' && PAGE_CONTENT[filename]) {
+        const markdown = PAGE_CONTENT[filename];
         contentDiv.innerHTML = marked.parse(markdown);
-    } catch (error) {
-        console.error(error);
-        contentDiv.innerHTML = `<p class="text-red-500">If this is not rendered yet go to: /Reports/backup/index.html for a backup version that doesn't utilise markdown.js</p>`;
+        return;
     }
+
+    // Fallback error if content not found
+    contentDiv.innerHTML = `<p class="text-red-500">If you are seeing this text, hence the rendering system for markdown isnt working. Direct yourself to /backup/index.html in the report folder</p>`;
 }
 
 function select(element) {
     const previous = document.getElementById('selected');
 
-    if (previous == element) { // check 1 - already selected
+    if (previous == element) { // check 1 - already selected check
         console.log('ignoring')
         return
     }
@@ -47,7 +42,6 @@ function select(element) {
 
 /* should override default id tag when clicked to next */
 document.addEventListener("DOMContentLoaded", () => {
-    // Add click handlers to all nav tabs
     document.querySelectorAll('.nav-tab').forEach(tab => {
         tab.addEventListener('click', () => select(tab));
     });

@@ -1,0 +1,2 @@
+Yes I am aware that this is redundant. However formatting markdown in content.js is a pain so im gonna 
+do it here first, then convert it over to content.js

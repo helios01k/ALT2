@@ -72,7 +72,7 @@ def notifs_to_int(notif: str) -> int:
 def compute_addiction_score(row: list, likert_cols: list) -> int:
     total = sum(LIKERT_MAP[row[i]] for i in likert_cols if row[i] in LIKERT_MAP)
     if total == 0:
-        return None
+        return None # everyone set to never
     # as mentioned in kaggle, max is set to 7 only in score
     return round((total / MAX_LIKERT_SCORE) * 7)
 
@@ -98,7 +98,6 @@ with open("Artefact/datasets/ty_scifest_screentime.csv", "r", encoding="utf-8-si
             "age": 14,
             "gender": gender_check(row[1]),
             "phone_hours": hour_to_float(row[5]),
-            "other_hours": hour_to_float(row[6]),
             "notifs": notifs_to_int(row[12]),
             "addiction_score": compute_addiction_score(row, likert_cols),
             "source": "scifest"

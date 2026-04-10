@@ -1,12 +1,12 @@
 import pandas as pd
 
 from scifest import students  # 2nd years (14) - primary
-from kaggle import users      # 18yr olds - secondary
+from kaggle import students as kaggle_students  # 18yr olds - secondary
 
 SAMPLE_SIZE = 100
 
 scifest_df = pd.DataFrame(students).rename(columns={"phone_hours": "screen_hours"})
-kaggle_df  = pd.DataFrame(users)
+kaggle_df  = pd.DataFrame(kaggle_students)
 
 merged = pd.concat([
     scifest_df.sample(SAMPLE_SIZE),

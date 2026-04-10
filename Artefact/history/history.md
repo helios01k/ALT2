@@ -1,0 +1,2 @@
+each cs-session is a copy of the active workspace for that session, some file names changed throughout cs04 and cs03
+the main.py file (outside of /history) was made in one entire go and has no previous versions

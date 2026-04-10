@@ -10,11 +10,12 @@ border rounded-[4px] bg-white (tailwind)
 
 #content {
     padding: 1.5rem;
-    max-height: 65vh;
-    overflow-y: auto;
+    width: 100%;
     background-color: #fafafa;
     border-radius: 0.5rem;
     border: 1px solid #e5e7eb;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 /*
