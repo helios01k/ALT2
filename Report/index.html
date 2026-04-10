@@ -7,16 +7,15 @@
     <title>LCCS | ALT2 </title>
     <link rel="stylesheet" href="bundles/cssdebug.css"> <!--for debugging divs-->
     <link rel="stylesheet" href="assets/styles.css"> <!--for general purpose styling-->
-    <script src="assets/selector.js"></script> <!--navbar logic and responsive ui controller-->
     <script src="bundles/tailwind.js"></script> <!--for css-->
-    <script src="bundles/markdown.js"></script> <!--for text-->
+    <script type="module" src="assets/selector.js"></script> <!--navbar logic and responsive ui controller-->
 </head>
 <body class="">
     <!--btw, pls ignore empty id tags | they use to have id="debug" in them at some point-->
     <div id="" class="min-h-screen w-screen flex justify-center">
         <div id="" class="min-w-[50%] m-6 p-6 border rounded-2xl bg-white"> <!--[16px 2xl]-->
             <div class="font-bold text-4xl">
-                The link of screentime with social behaviours
+                Screen Time Analysis | ALT2 - Data Analytics
             </div>
             <div>
                 Adam Bell, Nathaniel Norton Silva & Taras Turchyn
@@ -29,11 +28,17 @@
                 p-2 border rounded-[4px] bg-white
                 hover:border hover:rounded-[4px] hover:bg-white < leagcy
                 -->
-                <btn id="default" class="p-2 cursor-pointer" onclick="select(this)">Investigation & Plan</btn>
-                <btn class="p-2 cursor-pointer" onclick="select(this)">Design</btn>
-                <btn class="p-2 cursor-pointer" onclick="select(this)">Implementation & Testing</btn>
-                <btn class="p-2 cursor-pointer" onclick="select(this)">Evaluation</btn>
-                <btn class="p-2 cursor-pointer" onclick="select(this)">Extra Information</btn>
+                <btn id="default" class="nav-tab p-2 cursor-pointer">Investigation & Plan</btn>
+                <btn class="nav-tab p-2 cursor-pointer">Design</btn>
+                <btn class="nav-tab p-2 cursor-pointer">Implementation & Testing</btn>
+                <btn class="nav-tab p-2 cursor-pointer">Evaluation</btn>
+                <btn class="nav-tab p-2 cursor-pointer">Extra Information</btn>
+            </div>
+            <div class="py-2">
+                <!--spacing between navbar and content-->
+            </div>
+            <div id="content" class="prose max-w-none">
+                <!--markdown content will be rendered here-->
             </div>
         </div>
     </div>

@@ -1,10 +1,177 @@
-
 /*
-RAW CSS derived from: 
+RAW CSS derived from:
 border rounded-[4px] bg-white (tailwind)
 */
 #selected {
     border-width: 1px;
     border-radius: 4px;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+#content {
+    padding: 1.5rem;
+    max-height: 65vh;
+    overflow-y: auto;
+    background-color: #fafafa;
+    border-radius: 0.5rem;
+    border: 1px solid #e5e7eb;
+}
+
+/*
+BELOW CSS IS A IMPORT EDIT TARGETED AT MARKDOWN.js !
+*/
+#content h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 2rem 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e5e7eb;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+}
+#content h1:first-child { margin-top: 0; }
+
+#content h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 1.75rem 0 0.75rem 0;
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+}
+
+#content h3 {
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: #374151;
+    margin: 1.5rem 0 0.5rem 0;
+    line-height: 1.4;
+}
+
+#content h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #4b5563;
+    margin: 1.25rem 0 0.5rem 0;
+    line-height: 1.4;
+}
+
+#content h5, #content h6 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #6b7280;
+    margin: 1rem 0 0.5rem 0;
+    line-height: 1.5;
+}
+
+#content p {
+    margin: 1rem 0;
+    line-height: 1.75;
+    color: #374151;
+    font-size: 1rem;
+}
+
+#content ul, #content ol {
+    margin: 1rem 0;
+    padding-left: 1.75rem;
+    line-height: 1.7;
+}
+
+#content ul { list-style-type: disc; }
+#content ol { list-style-type: decimal; }
+#content li {
+    margin: 0.375rem 0;
+    color: #374151;
+}
+#content li::marker {
+    color: #9ca3af;
+}
+
+#content ul ul, #content ol ol, #content ul ol, #content ol ul {
+    margin: 0.5rem 0;
+}
+
+#content code {
+    background-color: #f3f4f6;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.9em;
+    color: #dc2626;
+}
+
+#content pre {
+    background-color: #1f2937;
+    color: #f9fafb;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    margin: 1.25rem 0;
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+#content pre code {
+    background-color: transparent;
+    padding: 0;
+    color: inherit;
+}
+
+#content blockquote {
+    border-left: 4px solid #3b82f6;
+    padding: 0.75rem 1rem;
+    margin: 1.25rem 0;
+    background-color: #eff6ff;
+    color: #1e40af;
+    border-radius: 0 0.375rem 0.375rem 0;
+    font-style: italic;
+}
+
+#content a {
+    color: #2563eb;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+}
+#content a:hover {
+    color: #1d4ed8;
+    border-bottom-color: #1d4ed8;
+}
+
+#content table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1.25rem 0;
+    font-size: 0.95rem;
+}
+#content th, #content td {
+    border: 1px solid #d1d5db;
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+#content th {
+    background-color: #f9fafb;
+    font-weight: 600;
+    color: #111827;
+}
+#content tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+#content hr {
+    border: 0;
+    border-top: 2px solid #e5e7eb;
+    margin: 2rem 0;
+}
+
+#content input[type="checkbox"] {
+    margin-right: 0.5rem;
+    accent-color: #2563eb;
+}
+
+#content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
 }
