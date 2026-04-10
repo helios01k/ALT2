@@ -1,22 +1,40 @@
+const USE_LIVESERVER = false; // live server patch for file accessing and cors for debug
+
+
 const tab_file = {
     "Investigation & Plan": "plan.md",
     "Design": "design.md",
     "Implementation & Testing": "testing.md",
-    "Evaluation": "eval.md",
+    "Evaluation": "eval.md", // ignored actually
     "Extra Information": "extras.md"
 };
 
-function load_markdown(filename) {
+async function load_markdown(filename) {
     const contentDiv = document.getElementById('content');
 
-    // get embed
+    // fetch from md
+    if (USE_LIVESERVER) {
+        try {
+            const response = await fetch(`pages/${filename}`);
+            if (!response.ok) throw new Error(`Failed to load ${filename}`);
+            const markdown = await response.text();
+            contentDiv.innerHTML = marked.parse(markdown);
+            return;
+        } catch (error) {
+            console.error(error);
+            contentDiv.innerHTML = `<p class="text-red-500">Error loading: ${filename}</p>`;
+            return;
+        }
+    }
+
+    // fetch js
     if (typeof PAGE_CONTENT !== 'undefined' && PAGE_CONTENT[filename]) {
         const markdown = PAGE_CONTENT[filename];
         contentDiv.innerHTML = marked.parse(markdown);
         return;
     }
 
-    // Fallback error if content not found
+    //  error
     contentDiv.innerHTML = `<p class="text-red-500">If you are seeing this text, hence the rendering system for markdown isnt working. Direct yourself to /backup/index.html in the report folder</p>`;
 }
 

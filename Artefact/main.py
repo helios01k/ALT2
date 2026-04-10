@@ -24,7 +24,6 @@ screen_labels = ["0-2", "2-4", "4-6", "6-8", "8-10", "10-12"]
 notif_bins    = [0, 50, 100, 200, 300, 400, 500]
 notif_labels  = ["0-50", "50-100", "100-200", "200-300", "300-400", "400+"]
 
-
 def chart_1():
     fig, axes = plt.subplots(1, 3, figsize=(16, 5))
     fig.suptitle("Average Comparison: 14yr vs 18yr")
@@ -131,6 +130,7 @@ def chart_6():
     plt.show()
 
 
+compute_stats()
 chart_1()
 chart_2()
 chart_3()

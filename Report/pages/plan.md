@@ -1,5 +1,5 @@
 # Screen Time & Usage Addiction - Comparison-based study
-*word count: n/a* 
+**Word Count: 253**
 
 ## Introduction
 

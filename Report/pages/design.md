@@ -1,5 +1,5 @@
 # Screen Time & Usage Addiction - Design 
-**Word Count:**
+**Word Count: 696**
 
 ## Main Flowchart
 ![flowchart](assets/flowchart_main.png)
